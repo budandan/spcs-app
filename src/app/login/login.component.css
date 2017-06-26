@@ -1,0 +1,22 @@
+.header {
+    text-align: center;
+}
+
+.col {
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+}
+
+.row {
+    text-align: center;
+}
+
+#logodiv {
+    text-align: center;
+    width: 100%;
+}
+
+#logo {
+    width: 200px;
+}

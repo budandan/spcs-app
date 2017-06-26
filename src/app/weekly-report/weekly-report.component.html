@@ -1,0 +1,67 @@
+<div class='container' *ngIf='!isCompleted'>
+    <h2 class='text-center'>{{ month }} Weekly Report for {{ client }}</h2>
+
+    <br>
+    <br>
+    <h3>Week 1</h3>
+
+    <label for='input1'> {{ goal1 }} </label><br>
+    <textarea id='[input1]'></textarea><br>
+
+    <label for='input2'> {{ goal2 }} </label><br>
+    <textarea id='[input2]'></textarea><br>
+
+    <label for='input3'> {{ goal3 }} </label><br>
+    <textarea id='[input3]'></textarea><br><br>
+
+    <br>
+    <br>
+    <h3>Week 2</h3>
+
+    <label for='input1'> {{ goal1 }} </label><br>
+    <textarea id='[input1]'></textarea><br>
+
+    <label for='input2'> {{ goal2 }} </label><br>
+    <textarea id='[input2]'></textarea><br>
+
+    <label for='input3'> {{ goal3 }} </label><br>
+    <textarea id='[input3]'></textarea><br><br>
+
+    <br>
+    <br>
+    <h3>Week 3</h3>
+
+    <label for='input1'> {{ goal1 }} </label><br>
+    <textarea id='[input1]'></textarea><br>
+
+    <label for='input2'> {{ goal2 }} </label><br>
+    <textarea id='[input2]'></textarea><br>
+
+    <label for='input3'> {{ goal3 }} </label><br>
+    <textarea id='[input3]'></textarea><br><br>
+
+    <br>
+    <br>
+    <h3>Week 4</h3>
+
+    <label for='input1'> {{ goal1 }} </label><br>
+    <textarea id='[input1]'></textarea><br>
+
+    <label for='input2'> {{ goal2 }} </label><br>
+    <textarea id='[input2]'></textarea><br>
+
+    <label for='input3'> {{ goal3 }} </label><br>
+    <textarea id='[input3]'></textarea><br><br>
+
+    <div class='row text-center'>
+        <button class='button btn-primary' (click)='weeklySubmit()'>Submit</button>
+    </div>
+    <br>
+    <br>
+    <br>
+</div>
+
+<div class='container' *ngIf='isCompleted'>
+    <p>Thank you! You have submitted your Weekly Report!</p>
+
+</div>

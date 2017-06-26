@@ -1,0 +1,135 @@
+<p>firebase testing</p>
+
+<div class='container-fluid'>
+    <div class='row text-center' id='client-name'>
+        <h2>{{ shift.client }}</h2>
+        <br>
+    </div>
+
+    <div class='row text-center' id='client-image'>
+        <img [src]='[shift.clientImage]' />
+    </div>
+    <br>
+    <br>
+
+    <div class='row text-center' id='date'>
+        <label for='date'>Date:</label> {{ shift.date }}
+    </div>
+
+    <div class='row text-center' id='staff'>
+        <label for='staff'>Assigned Staff:</label> {{ shift.staff }}
+    </div>
+
+    <div class='row text-center' id='start-time'>
+        <label for='start-time'>Start Time: </label> {{ shift.startTime }}
+    </div>
+
+    <div class='row text-center' id='end-time'>
+        <label for='end-time'>End Time: </label> {{ shift.endTime }}
+    </div>
+
+    <div class='row text-center' id='location-shift'>
+        <label for='location-shift'>Location: </label> {{ shift.locationShift }}
+    </div>
+
+    <div class='row text-center' id='location-pickup'>
+        <label for='location-pickup'>Pickup From: </label> {{ shift.locationPickup }}
+    </div>
+
+    <div class='row text-center' id='location-dropoff'>
+        <label for='location-dropoff'>Dropoff At: </label> {{ shift.locationDropoff }}
+    </div>
+
+    <br>
+    <br>
+
+    <div class='row text-center' id='activities'>
+        <label for='activities'>Activities: </label> {{ shift.activities }}
+    </div>
+
+    <div class='row text-center' id='chores'>
+        <label for='chores'>Chores: </label> {{ shift.chores }}
+    </div>
+
+    <div class='row text-center' id='medicine'>
+        <label for='medicine'>Medicine: </label> {{ shift.medicine }}
+    </div>
+
+    <div class='row text-center' id='notes'>
+        <label for='notes'>Notes: </label> {{ shift.notes }}
+    </div>
+    <br>
+    <br>
+
+
+    <div class='row text-center' id='todo'>
+        <a [class]="[medClass]" class='shift-buttons' data-toggle="modal" data-target="#medModal">{{ medText }}</a>
+        <a [class]="[choresClass]" class='shift-buttons' data-toggle="modal" data-target="#choresModal">{{ choresText }}</a>
+    </div>
+
+    <div class='row text-center' id='extras'>
+        <a (click)='submitComments()' class="btn btn-primary">Staff Comments</a>
+        <a (click)='changeHours()' class='shift-buttons' class="btn btn-success">Change Hours</a>
+    </div>
+
+
+
+
+    <!-- Medicine Modal -->
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="medModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Confirm Medicine</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>You agree to the following statement: <br><br> "I confirm that medication was administered as defined in this shift description."</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger mbutton" style='margin-right: 10px' data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success mbutton" style='margin-left: 10px' data-dismiss="modal" (click)='takeMedicine()'>Confirm</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- End Medicine Modal -->
+
+    <!-- Chores Modal -->
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="choresModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Confirm Chores</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>You agree to the following statement: <br><br> "I confirm that chores were completed as defined in this shift description."</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger mbutton" style='margin-right: 10px' data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success mbutton" style='margin-left: 10px' data-dismiss="modal" (click)='doChores()'>Confirm</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- End Chores Modal -->
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+</div>

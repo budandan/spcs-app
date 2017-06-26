@@ -1,0 +1,13 @@
+img {
+    width: 200px;
+}
+
+.mbutton {
+    margin-left: 100px;
+}
+
+#todo a,
+#extras a {
+    width: 200px;
+    margin: 30px;
+}
